@@ -1,0 +1,105 @@
+.filter {
+    display: flex;
+    gap: 30px;
+    padding: 100px 80px 60px 80px;
+}
+.dropbtn {
+    background-color: #ff4654;
+    color: white;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    height: 51px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+.dropbtn h2 {
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.dropdown-content {
+    position: absolute;
+    top: 44px;
+    display: none;
+    background-color: #102131;
+    width: 100%;
+    height: max-content;
+    border-bottom-right-radius: 12px;
+    border-bottom-left-radius: 12px;
+    z-index: 0;
+    padding: 0px 12px;
+}
+
+.dropdown-content label {
+    color: #ffffff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .vector-down {
+    transform: rotate(180deg);
+}
+.choice {
+    background-color: #375470;
+    display: flex;
+    align-items: center;
+    padding: 12px 24px;
+    gap: 12px;
+    /* width: 261px; */
+    height: 51px;
+    margin: 18px auto;
+    border-radius: 12px;
+}
+.choice label {
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+.choice input {
+    width: 15px;
+    height: 27px;
+    border: none;
+}
+.gridd {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    padding: 0 80px;
+}
+.gridd .card-template div div:first-of-type p {
+    display: none;
+}
+.gridd .card-template:hover {
+    transform: scale(1.1);
+}
+.searchbtn {
+    background-color: #ff4654;
+    color: white;
+    padding: 16px;
+    border: none;
+    border-radius: 12px;
+    width: 105px;
+    height: 51px;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+.searchbtn:hover {
+    transform: scale(1.1);
+}
+#img {
+    width: calc(100% - 160px);
+
+    margin-left: 84px;
+}

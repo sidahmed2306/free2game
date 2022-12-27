@@ -1,0 +1,75 @@
+@font-face {
+    font-family: "Oswald";
+    src: url(./fonts/Oswald-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: "TitilliumWeb";
+    src: url(./fonts/TitilliumWeb-Regular.ttf);
+}
+:root {
+    --backgroundImage: url("https://www.freetogame.com/g/12/War-Thunder-1.jpg");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    display: inline-block;
+    background-color: #ff4654;
+    font-size: 1.8rem;
+    color: inherit;
+    padding: 12px 24px;
+    border-radius: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: fit-content;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Oswald";
+    font-weight: 100 900;
+    background-color: #040f14;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+.image {
+    width: calc(100% -24px);
+    aspect-ratio: 3/1;
+    display: flex;
+    align-items: flex-end;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 24px;
+    margin: 80px 64px 0;
+}
+.image :first-child {
+    width: 400px;
+    margin: 50px;
+    font-size: 4.8rem;
+    text-transform: uppercase;
+    text-shadow: -1px -1px 0 #102130, 1px -1px 0 #102130, -1px 1px 0 #102130,
+        1px 1px 0 #102130;
+}
+.card-template img {
+    width: 100%;
+    border-radius: 24px;
+    object-fit: cover;
+}
+
+main {
+    padding-left: 74px;
+}
+
+header {
+    padding-left: 74px;
+}

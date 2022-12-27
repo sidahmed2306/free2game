@@ -1,0 +1,44 @@
+.side-bar {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 33%;
+    align-items: flex-start;
+    top: 0;
+    z-index: 5;
+    margin-right: 30px;
+    background-color: #040f14;
+    border-right: 2px solid white;
+
+    height: 100%;
+}
+.side-bar button {
+    background-color: initial;
+    border: none;
+    color: white;
+}
+
+.side-bar div {
+    display: flex;
+    flex-direction: column;
+}
+
+.side-bar div a {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 12px 12px 0;
+    background-color: initial;
+}
+.side-bar div a p {
+    padding-right: 13px;
+}
+
+.side-bar div a:hover {
+    background-color: #ff4654;
+}
+
+.side-bar div a:focus {
+    background-color: #102130;
+    /* --backgroundColor */
+}

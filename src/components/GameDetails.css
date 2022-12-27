@@ -1,0 +1,60 @@
+.details * p {
+    font-size: 1.6rem;
+}
+.details * h5 {
+    font-size: 1.8rem;
+}
+
+.details h2 {
+    font-size: 4.8rem;
+    margin: 9.6% 8% 4.8%;
+}
+.row-wrapper {
+    display: flex;
+    margin: 0 8%;
+    gap: 25px;
+}
+.row-wrapper > div {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-bottom: 96px;
+}
+.row-wrapper div img {
+    width: 100%;
+    border-radius: 24px;
+}
+.row-wrapper div h3 {
+    font-size: 2.4rem;
+}
+
+.row-wrapper div img.thumbnail {
+    width: 70%;
+}
+
+.add-info div {
+    display: flex;
+    align-items: baseline;
+}
+.add-info div h5 {
+    min-width: 20%;
+}
+
+.min-req {
+    display: flex;
+    justify-content: space-between;
+}
+.min-req div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.red-border {
+    width: fit-content;
+    border: 1px solid #ff4654;
+    background-color: #102130;
+    border-radius: 15px;
+    font-size: 1.6rem;
+    padding: 6px 12px;
+}
