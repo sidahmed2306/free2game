@@ -3,6 +3,9 @@ import GameCard from "../components/GameCard";
 import AppContext from "../components/AppContext";
 import "./AllGames.css";
 const AllGames = () => {
+  const api = process.env.REACT_APP_KEY;
+  console.log(api);
+
   const context = useContext(AppContext);
   const [platform, setPlatform] = useState("all");
   const [genre, setGenre] = useState("");
@@ -10,9 +13,16 @@ const AllGames = () => {
   const [data, setData] = useState([]);
   let id;
   let gameName = context.nameContext;
-  let fetchUrl = `https://www.freetogame.com/api/games?&platform=${platform}${genre}&sort-by=${sort}`;
+  let fetchUrl = `https://free-to-play-games-database.p.rapidapi.com/api/games?&platform=${platform}${genre}&sort-by=${sort}`;
   const fetchData = () => {
-    fetch(`${fetchUrl}`)
+    const options = {
+      method: "GET",
+      headers: {
+        "X-RapidAPI-Key": process.env.REACT_APP_KEY,
+        "X-RapidAPI-Host": "free-to-play-games-database.p.rapidapi.com",
+      },
+    };
+    fetch(fetchUrl, options)
       .then((response) => response.json())
       .then((json) => setData(json));
   };
@@ -21,7 +31,8 @@ const AllGames = () => {
       if (gameName.toLowerCase() == e.title.toLowerCase()) {
         console.log(e.id);
         id = e.id;
-        fetchUrl = `https://www.freetogame.com/api/game?id=${id}`;
+
+        fetchUrl = `https://free-to-play-games-database.p.rapidapi.com/api/game?id=${id}`;
         console.log(fetchUrl);
       }
     });

@@ -2,15 +2,24 @@ import { useEffect, useState, useContext } from "react";
 import GameCard from "../components/GameCard.js";
 import AppContext from "../components/AppContext";
 import "./RecentlyAdded.css";
+const api = process.env.REACT_APP_KEY;
 const RecentlyAdded = () => {
-  let fetchUrl = "https://www.freetogame.com/api/games?sort-by=release-date";
+  let fetchUrl =
+    "https://free-to-play-games-database.p.rapidapi.com/api/games?sort-by=release-date";
+  const options = {
+    method: "GET",
+    headers: {
+      "X-RapidAPI-Key": process.env.REACT_APP_KEY,
+      "X-RapidAPI-Host": "free-to-play-games-database.p.rapidapi.com",
+    },
+  };
   let id;
   const context = useContext(AppContext);
   let gameName = context.nameContext;
   const [recentGames, setRecentGames] = useState([]);
   const fetchData = () => {
     console.log(fetchUrl);
-    fetch(`${fetchUrl}`)
+    fetch(fetchUrl, options)
       .then((res) => res.json())
       .then((json) => setRecentGames(json));
   };
